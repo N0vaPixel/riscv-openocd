@@ -18,6 +18,8 @@ struct riscv_program;
 #define RISCV_MAX_TRIGGERS 32
 #define RISCV_MAX_HWBPS 16
 
+#define RISCV_HART_SCAN_START 950
+
 #define DEFAULT_COMMAND_TIMEOUT_SEC		2
 #define DEFAULT_RESET_TIMEOUT_SEC		30
 

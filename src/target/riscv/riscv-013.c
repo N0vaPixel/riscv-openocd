@@ -1667,7 +1667,7 @@ static int examine(struct target *target)
 
 	/* Before doing anything else we must first enumerate the harts. */
 	if (dm->hart_count < 0) {
-		for (int i = 0; i < MIN(RISCV_MAX_HARTS, 1 << info->hartsellen); ++i) {
+		for (int i = RISCV_HART_SCAN_START; i < MIN(RISCV_MAX_HARTS, 1 << info->hartsellen); ++i) {
 			if (dm013_select_hart(target, i) != ERROR_OK)
 				return ERROR_FAIL;
 
